@@ -49,7 +49,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http
+        /*http
             .csrf()
             .disable()
             .addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class)
@@ -71,7 +71,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .antMatchers("/management/**").hasAuthority(AuthoritiesConstants.ADMIN)
         .and()
             .apply(securityConfigurerAdapter());
-
+        */
     }
 
     private JWTConfigurer securityConfigurerAdapter() {
